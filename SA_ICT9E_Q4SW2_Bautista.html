@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+	<title>Q4 Seatwork 2</title>
+
+	<style type="text/css">
+            	text{
+            		font-family: 'Bangers', cursive;
+            	}
+
+            	body{       
+     		background: url(promo_temperature_facebook.png);
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 20px;
+            opacity: 1.900;
+            margin: auto;
+        }
+
+        img {
+        	display: block;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+
+        }
+        .top {
+            --offset: 50px; 
+            position: sticky;
+            bottom: 20px;      
+            margin-right: 10px; 
+            place-self: end;
+            margin-top: calc(100vh + var(--offset));
+            text-decoration: none;
+            padding: 10px;
+            font-family: sans-serif;
+            color: Green;
+            background: white;
+            border-radius: 100px;
+            white-space: nowrap;
+}
+            </style>
+
+</head>
+<body>
+	<div class="container bg-white" style="font-size: 4em; font-family: 'Bangers', cursive;">
+<h1 align="center">Temperature Converter</h1>
+</div>
+
+<div class="container bg-white" style="font-family: font-family: 'Darumadrop One', cursive;">
+
+	<form align="center">
+
+	<label><b>FAHRENHEIT to CELSIUS</label>
+	<br>
+	<input type="number" name="num1" id="num1" style="height: 100px; width: 500px">
+	<hr>
+	<button type="submit" onclick="Compute()" class="btn-success">Convert</button>
+
+    </form>
+    <img src="cold.jpeg" class="center">
+    <h5><i>Date and Time today:</h5>
+    	<hr>
+
+	<p id="today"></p>
+	<div style="text-align:center;padding:1em 0;"> 
+	<h2><span style="color:black;">Current local time in</span><br />Philippines</a></h2> <iframe src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=&timezone=Asia%2FManila" width="100%" height="150" frameborder="0" seamless></iframe>
+    </div>
+<hr>
+
+	<script>
+		function Compute(){
+    		var num1 = document.getElementById("num1").value;
+    		var celsius = Number (num1 - 32) * 5/9;
+    		window.alert("That temperature in Celsius is: " + celsius);
+    	}
+		document.getElementById("today").innerHTML = date;
+	</script>
+
+	<div>
+		<div class="container bg-white" style="font-family: font-family: 'Darumadrop One', cursive;">
+
+	<form align="center">
+
+	<label><b>MORE INFO:</label>
+	<br>
+	<hr>
+    <img src="Temperatrue-Conversion-Chart.jpeg" class="center">
+    <img src="printable-celsius-to-fahrenheit-conversion-chart.png" class="center">
+    <img src="printable-fahrenheit-to-celsius-conversion-chart.png" class="center">
+</div>
+
+<div class="container bg-light">
+		
+<hr>
+
+	<table class="table table-hover table-bordered">
+
+<address align="center">
+By: Asher Job Bautista<br>
+<hr>
+<a href="#" class="top">Back to Top &#8593;</a>
+<!-- https://www.zeitverschiebung.net/en/clock-widget?timezone=Asia/Manila&type=country&id=PH 
+https://www.printableparadise.com/printable-temperature-conversion-charts.html	a-->
+
+</address>
+</div>
+</table>
+</body>
+</html>
